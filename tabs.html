@@ -1,0 +1,66 @@
+<html>
+<head>
+    <style>
+        body{
+            padding: 20px;
+        }
+        .list-items ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+        }
+        .list-items ul li{
+            margin-right: 20px;
+        }
+        .list-items ul li a{
+            color: black;
+            background: antiquewhite;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .main-inner{
+            display: none;
+        }
+        .main-inner.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="list-items">
+<ul>
+    <li><a href="#one">List one</a></li>
+    <li><a href="#two">List two</a></li>
+    <li><a href="#three">List three</a></li>
+    <li><a href="#four">List four</a></li>
+</ul>
+</div>
+
+
+<div class="Main">
+    <div class="main-inner active" id="one"><h1>This is Tab ONE</h1></div>
+    <div class="main-inner" id="two"><h1>This is Tab TWO</h1></div>
+    <div class="main-inner" id="three"><h1>This is Tab THREE</h1></div>
+    <div class="main-inner" id="four"><h1>This is Tab FOUR</h1></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $(".list-items ul li a").click(function(){
+            var tabLink = $(this).attr("href");
+            var tabSlider = $(".main-inner").attr("id");
+            var tabSliderID = "#"+tabSlider;
+            var showThisSlider = tabSliderID = tabLink;
+            $(".main-inner").hide();
+            $(".main-inner"+showThisSlider).show();
+        });
+
+    });
+</script>
+
+</body>
+</html>
