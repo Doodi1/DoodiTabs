@@ -25,13 +25,13 @@ Tabs with jQuery
 
 
 
-3- Add jquery
-4- Add this jquery Code
-
-
+3- Add jquery cdn or downloaded file.
+4- Add this jquery Code.
 <!-- START JQUERY -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
+
+
+    
+
     $(document).ready(function(){
 
         /* TABS ON CLICK FUNCTION */
@@ -45,5 +45,7 @@ Tabs with jQuery
         });
 
     });
-</script>
+
+
+
 <!-- END JQUERY -->
