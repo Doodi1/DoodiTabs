@@ -1,7 +1,7 @@
 # DoodiTabs
 Tabs with jQuery
 
-1- Create you tabs buttons or links list
+1- Create you tabs buttons or links list, --GIVE YOUR "CUSTOM-CLASS-LIST" TO DIV OF LIST--
 <!-- START TABS LINK BUTTONS LIST -->
 <div class="list-items">
 <ul>
@@ -13,7 +13,7 @@ Tabs with jQuery
 </div>
 <!-- END TABS LINK BUTTONS LIST -->
 
-2- Create you main tabs content divs
+2- Create you main tabs content divs --GIVE YOUR "CUSTOM-CLASS-DIVS" TO EACH DIV--
 <!-- START TABS MAIN CONTENT LIST -->
 <div class="Main">
     <div class="main-inner active" id="one"><h1>This is Tab ONE</h1></div>
@@ -35,13 +35,13 @@ Tabs with jQuery
     $(document).ready(function(){
 
         /* TABS ON CLICK FUNCTION */
-        $(".list-items ul li a").click(function(){
+        $(".CUSTOM-CLASS-LIST ul li a").click(function(){
             var tabLink = $(this).attr("href");    // Getting the --href-- from tabs buttons
-            var tabSlider = $(".main-inner").attr("id"); // Getting main content --ID--
+            var tabSlider = $(".CUSTOM-CLASS-DIVS").attr("id"); // Getting main content --ID--
             var tabSliderID = "#"+tabSlider;
             var showThisSlider = tabSliderID = tabLink; // Checking main content --ID-- == tab button --href--
-            $(".main-inner").hide(); // Hiding all main content
-            $(".main-inner"+showThisSlider).show(); // Showing matching main content == tab button clicked
+            $(".CUSTOM-CLASS-DIVS").hide(); // Hiding all main content
+            $(".CUSTOM-CLASS-DIVS"+showThisSlider).show(); // Showing matching main content == tab button clicked
         });
 
     });
